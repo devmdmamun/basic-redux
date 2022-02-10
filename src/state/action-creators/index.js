@@ -1,16 +1,16 @@
-export const dipositMoney = (ammount) => {
+export const increment = (ammount) => {
   return (dispatch) => {
     dispatch({
-      type: "DOPOSIT",
+      type: "INCREMENT",
       payload: ammount,
     });
   };
 };
 
-export const withdrawMoney = (ammount) => {
+export const decrement = (ammount) => {
   return (dispatch) => {
     dispatch({
-      type: "WITHDRAW",
+      type: "DECREMENT",
       payload: ammount,
     });
   };

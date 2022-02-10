@@ -1,21 +1,25 @@
 import "./App.css";
+// import useSelector & useDispatch from react-redux
 import { useSelector, useDispatch } from "react-redux";
+// import bindActionCreators from redux
 import { bindActionCreators } from "redux";
+// import actionCreators
 import { actionCreators } from "./state/index";
 
 function App() {
-  const account = useSelector((state) => state.account);
+  const count = useSelector((state) => state.count);
+  console.log(count);
+  // assigned useDispatch to dispatch variable.
   const dispatch = useDispatch();
-  const { dipositMoney, withdrawMoney } = bindActionCreators(
-    actionCreators,
-    dispatch
-  );
+
+  // destructuring increment and decrement actions
+  const { increment, decrement } = bindActionCreators(actionCreators, dispatch);
 
   return (
     <div className="App">
-      <h2>{account}</h2>
-      <button onClick={() => dipositMoney(100)}>Diposit</button>
-      <button onClick={() => withdrawMoney(100)}>Withdraw</button>
+      <h2>{count}</h2>
+      <button onClick={() => increment(100)}>increment</button>
+      <button onClick={() => decrement(100)}>decrement</button>
     </div>
   );
 }
