@@ -1,3 +1,7 @@
+# Redux and Redux toolkit - simply explained.
+
+![Redux & Redux toolkit](https://blog.devmdmamun.com/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1644517734568%2FQeQOT4Z6u.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75)
+
 ## Introduction : 
 
 Since this article is about redux, I expect you know about ReactJs. If you don't know about ReactJs, learn ReactJs first.
@@ -184,8 +188,15 @@ export default App;
 
 ### Final product :
 
-If you followed along with me, you should have a counting app like this one.</br>
+If you followed along with me, you should have a counting app like this one. </br>
+
 ![redux.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1644513839594/GrzeWdxYf.gif)
+
+### How it works :
+
+![@DevMdMamun.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1644585925549/Nuic7KlIu.png)
+
+When you click the increment or decrement button from UI, it fires a function telling the action creator to create an action. That action then passed into the reducer. Reducer dispatches the action and returns a state. That state is then stored in the store. And our application reads the new state from the store and updates the UI.
 
 [You will find this project in my GitHub repository.](https://github.com/devmdmamun/basic-redux)
 
